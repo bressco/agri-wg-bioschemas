@@ -2,7 +2,6 @@
 	"@context": [
 		"https://w3id.org/ro/crate/1.1/context",
 		{
-			"odrl": "http://www.w3.org/ns/odrl.jsonld",
 			"cc": "http://creativecommons.org/ns",
 			"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
 			"dct": "http://purl.org/dc/terms/",
@@ -56,59 +55,10 @@
 				}
 			],
 			"license": {
-				"@id": "https://creativecommons.org/licenses/by-nc/4.0/legalcode"
+				"@id": "odrl.json",
+				"@type": "CreativeWork",
+				"@conformsTo": "http://www.w3.org/ns/odrl.jsonld"
 			},
-			"odrlPolicy": [
-				{
-					"_comment": "licence = cc-by nc. Quelle: https://raw.githubusercontent.com/w3c/odrl/master/bp/license/rdflicense/cc-by-nc4.0.ttl",
-					"@type": "odrl:policy",
-					"@id": "http://creativecommons.org/licenses/by-nc/4.0/",
-					"rdfs:label": "Creative Commons CC-BY-NC",
-					"rdfs:seeAlso": "http://creativecommons.org/licenses/by-nc/4.0/legalcode",
-					"cc:legalcode": "\r\nCreative Commons Attribution-NonCommercial 4.0 International Public License\r\n\r\nBy exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-NonCommercial 4.0 International Public License (\"Public License\"). [...]",
-					"dct:alternative": "CC BY-NC",
-					"dct:hasVersion": "4.0",
-					"dct:language": "http://www.lexvo.org/page/iso639-3/eng",
-					"dct:publisher": "Creative Commons",
-					"dct:source": "http://creativecommons.org/licenses/by-nc/4.0/",
-					"dct:title": "Creative Commons - Attribution-NonCommercial 4.0 International - CC BY-NC 4.0\"@en",
-					"odrl:permission": {
-						"odrl:action": [
-							"cc:Distribution",
-							"ldr:extraction",
-							"cc:Reproduction",
-							"cc:DerivativeWorks",
-							"ldr:reutilization"
-						],
-						"odrl:duty": {
-							"odrl:action": [
-								"cc:Notice",
-								"cc:Attribution"
-							]
-						}
-					},
-					"odrl:prohibition": {
-						"odrl:action": "cc:CommercialUse"
-					},
-					"foaf:logo": "http://i.creativecommons.org/l/by-nc/2.0/88x31.png"
-				},
-				{
-					"_comment": "Allgemeine Einschränkung der RDI, dass nur angemeldete User die Daten bekommen",
-					"@type": "odrl:Rule",
-					"@id": "http://edaphobase.org/RegisterRequired",
-					"odrl:assignee": {
-						"@type": "foaf:OnlineAccount"
-					}
-				},
-				{
-					"comment": "Einschränkung dieses Datensatzes, dass Daten nur auf Anfrage erreichbar sind",
-					"@type": "odrl:Rule",
-					"@id": "http://edaphobase.org/DataOnRequest",
-					"odrl:prohibition": {
-						"odrl:action": "odrl:read"
-					}
-				}
-			],
 			"name": "Coherent multivariable 6-year field trial data set for agro-ecosystem model verification and validation from Müncheberg experimental station",
 			"publisher": {
 				"@id": "https://ror.org/01ygyzs83"
